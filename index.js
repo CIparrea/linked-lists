@@ -11,7 +11,7 @@ class SinglyLinkedList{
         this.tail = null;
         this.lenght = 0;
     }
-    
+
     push(value){
         const newNode = new Node(value)
         if(!this.head){
@@ -34,6 +34,7 @@ class SinglyLinkedList{
             this.tail = newNode
         } else{
             let temp = this.head
+            this.head = newNode
             this.head.next = temp
         }
         this.lenght++
@@ -59,3 +60,5 @@ class SinglyLinkedList{
 
 const list = new SinglyLinkedList()
 list.push("A")
+list.unshift("A")
+list.shift()
